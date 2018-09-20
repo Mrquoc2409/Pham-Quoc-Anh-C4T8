@@ -1,0 +1,10 @@
+   1.To check a variable'type we use the command type()
+
+
+   2.You will get SyntaxError from the compiler when your name 
+doesn't start with a letter or when you use language keywords.
+
+
+ EG: -2foo    (must not begin with a digit)
+    -my foo  (spaces not allowed in names)
+    -$foo    ($ not allowed -- only letters, and _)
