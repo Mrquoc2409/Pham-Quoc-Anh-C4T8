@@ -10,8 +10,11 @@ while True:
             for i in password:
                 if i in string.digits:
                     break
-            if password != "techkid123":
+            for i in password:
+                if i in string.ascii_uppercase:
+                    break 
+            if password != "Techkid123":
                 print("Wrong password")
             else:
-                print("Welcome!")
+                print("welcome!")
                 break
