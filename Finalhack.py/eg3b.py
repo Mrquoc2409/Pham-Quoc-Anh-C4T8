@@ -1,0 +1,1 @@
+print ('k co gi')
