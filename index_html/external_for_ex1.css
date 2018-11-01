@@ -1,0 +1,36 @@
+
+
+h1{
+    font-family: 'Monoton', cursive;
+}
+
+h4{
+    color: rgb(194, 60, 60);
+    
+
+}
+
+.capitalize {
+    text-transform: uppercase;
+
+}
+
+.Bold{
+    font-weight: bold;
+    
+}
+
+#background{
+    background-image: url("https://nerdist.com/wp-content/uploads/2017/06/Adventure-Time-Finn-and-Jakes-House.jpg");
+    background-color: aquamarine;
+    background-size: cover;
+    height:500px;
+    width: 100%;
+    background-attachment: fixed
+
+}
+.color{
+    height:600px;
+    width: 100%;
+    background-color: aquamarine;
+}
