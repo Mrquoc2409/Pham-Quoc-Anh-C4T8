@@ -10,7 +10,7 @@ xk = 0
 yk = 2
 xe = 3
 ye = 3
-k1 = False
+k = False
 
 print ("Your move keys : W, A, S, D")
 
@@ -21,7 +21,7 @@ def map():
             if i == xe and j == ye:
                 print(Exit, end = '')
             elif i == xk and j == yk:
-                if k1 == False :
+                if k == False :
                     print(Key, end = ' ')
                 else:
                     print(Space, end = " ")
@@ -57,10 +57,10 @@ while True:
         yp += dy
     if xp == yk and yp == xk:
         print('Key acquired!')
-        k1 = True
+        k = True
     if xp == xe:
         if yp == ye:
-            if k1 == True :
+            if k == True :
                 print('You hveve won')
                 break    
             else:
