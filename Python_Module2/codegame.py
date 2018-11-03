@@ -1,6 +1,16 @@
+Player = "P"
+Key = "K"
+Exit = "E"
+Space = "-"
 
-x = 0
-y = 3 
+
+xp = 0
+yp = 3 
+xk = 0
+yk = 2
+xe = 3
+ye = 3
+k1 = False
 
 print ("Your move keys : W, A, S, D")
 
@@ -8,14 +18,17 @@ print ("Your move keys : W, A, S, D")
 def map():
     for i in range (4):
         for j in range (4):
-            if i == 3 and j == 3:
-                print("E", end = '')
-            elif i == 0 and j == 2:
-                print("K", end = '')
-            elif j == x and i == y:
-                print("P", end = '')
+            if i == xe and j == ye:
+                print(Exit, end = '')
+            elif i == xk and j == yk:
+                if k1 == False :
+                    print(Key, end = ' ')
+                else:
+                    print(Space, end = " ")
+            elif j == xp and i == yp:
+                print(Player, end = '')
             else:
-                print("-", end = '')
+                print(Space, end = '')
                     
         print() 
 
@@ -26,17 +39,7 @@ while True:
 
    
     map()
-    m = input('Move?')
-
-    # if x > 3:
-    #     dx = 0 
-    # elif x < 0:
-    #     dx = 0
-    # if y  > 3:
-    #     dy = 0
-    # elif y < 0:
-    #     dy = 0
-
+    m = input('Move?').lower()
 
     if m == "w":
         dy = -1
@@ -49,8 +52,16 @@ while True:
         
     elif m == "d":
         dx = 1
-    if x + dx <= 3 :    
-        x += dx
-        y += dy
-    
-
+    if 0 <= xp + dx < 4 and 0 <= yp + dy < 4: 
+        xp += dx
+        yp += dy
+    if xp == yk and yp == xk:
+        print('Key acquired!')
+        k1 = True
+    if xp == xe:
+        if yp == ye:
+            if k1 == True :
+                print('You hveve won')
+                break    
+            else:
+                print("You can't exit, please acquire the key first")   

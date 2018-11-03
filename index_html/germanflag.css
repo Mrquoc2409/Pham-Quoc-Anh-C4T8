@@ -1,0 +1,16 @@
+.flagpart1 {
+    background-color: black;
+    width: 500px;
+    height: 100px;
+
+}
+.flagpart2 {
+    background-color: red;
+    width: 500px;
+    height: 100px;
+}
+.flagpart3 {
+    background-color: yellow;
+    width: 500px;
+    height: 100px;
+}
